@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %} ">
+{% endblock %}
+
+{% block 'dashboard' %}
+<div class="container">
+    <header>
+        <div class="container">
+            <h1>Almoxarifado -  CTIC</h1>
+            <p>Gerência dos materias de TI do CBMRN</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Visualizar Materiais</h2>
+            <p>Acesse a lista de todos os materiais cadastrados no sistema.</p>
+            <a href="{% static 'home/css/home.css' %}" class="btn">Ver Materiais</a>
+        </div>
+        <div class="card">
+            <h2>Adicionar Material</h2>
+            <p>Cadastre novos materiais e mantenha seu estoque atualizado.</p>
+            <a href="{% static 'home/css/home.css' %}" class="btn">Adicionar Material</a>
+        </div>
+        <div class="card">
+            <h2>Relatórios</h2>
+            <p>Gere relatórios para análise do seu estoque.</p>
+            <a href="{% static 'home/css/home.css' %}" class="btn">Ver Relatórios</a>
+        </div>
+    </main>
+
+</div>
+<script src="{% static 'usuarios/js/usuarios.js' %}"></script>
+
+{% endblock %}

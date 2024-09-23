@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %} ">
+{% endblock %}
+
+{% block 'dashboard' %}
+<div class="container">
+    <header>
+        <div class="container">
+            <h1>Produtos Disponíveis</h1>
+            <p>Confira a lista de produtos e suas quantidades.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="product-scroll">
+            {% for produto in produtos %}
+            <div class="card">
+                <h2>{{ produto.nome }}</h2>
+                <p>Quantidade disponível: {{ produto.quantidade }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+</div>
+<script src="{% static 'usuarios/js/usuarios.js' %}"></script>
+
+{% endblock %}
